@@ -310,6 +310,56 @@ li + li {
   color: var(--text);
 }
 
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.screenshot-card {
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.screenshot-frame {
+  padding: 18px 18px 0;
+  background:
+    radial-gradient(circle at top left, rgba(82, 194, 255, 0.12), transparent 40%),
+    linear-gradient(180deg, rgba(122, 124, 255, 0.08), rgba(7, 10, 22, 0.02));
+}
+
+.screenshot-frame img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.28);
+}
+
+.screenshot-meta {
+  padding: 18px;
+}
+
+.screenshot-meta p {
+  margin-bottom: 0;
+}
+
+.device-chip {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: #9fd2ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .footer {
   padding: 22px 24px;
   display: flex;
@@ -344,6 +394,10 @@ code {
 
 @media (max-width: 900px) {
   .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .screenshot-grid {
     grid-template-columns: 1fr;
   }
 

@@ -16,6 +16,7 @@ Use this template in a separate public GitHub repository so the DoorCodes app co
 - `support.html`
 - `privacy.html`
 - `site.css`
+- `screenshots/`
 - `.nojekyll`
 - `.github/workflows/publish-pages.yml`
 
