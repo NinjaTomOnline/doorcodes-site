@@ -13,9 +13,14 @@ Use this template in a separate public GitHub repository so the DoorCodes app co
 ## Contents this repo should contain
 
 - `index.html`
+- `faq.html`
+- `whats-new.html`
 - `support.html`
 - `privacy.html`
 - `site.css`
+- `assets/`
+- `robots.txt`
+- `sitemap.xml`
 - `screenshots/`
 - `.nojekyll`
 - `.github/workflows/publish-pages.yml`

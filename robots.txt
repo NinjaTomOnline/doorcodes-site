@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://doorcodesapp.com/sitemap.xml
