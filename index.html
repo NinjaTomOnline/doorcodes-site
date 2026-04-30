@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="DoorCodes keeps place-based access details ready when you arrive, with privacy-safe reminders, Secure Reveal, and optional private iCloud sync on iPhone and iPad.">
   <meta name="robots" content="index,follow">
-  <meta name="theme-color" content="#060816">
+  <meta name="theme-color" content="#030407">
   <link rel="canonical" href="https://doorcodesapp.com/">
   <link rel="icon" type="image/png" href="assets/doorcodes-favicon-512.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -23,16 +23,16 @@
   <title>DoorCodes | Access codes, ready on arrival</title>
   <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body class="home-page">
   <div class="shell">
     <header class="topbar">
-      <div class="brand">
+      <a class="brand" href="index.html" aria-label="DoorCodes home">
         <div class="brand-mark">DC</div>
         <div class="brand-copy">
           <strong>DoorCodes</strong>
           <span>Access codes, ready on arrival</span>
         </div>
-      </div>
+      </a>
       <nav class="nav" aria-label="Primary">
         <a class="active" href="index.html">Home</a>
         <a href="faq.html">FAQ</a>
@@ -41,243 +41,178 @@
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
       </nav>
+      <a class="nav-cta app-store-cta" href="https://apps.apple.com/us/app/doorcodes-vault/id6761863570" aria-label="Download DoorCodes on the App Store">
+        <span class="store-icon" aria-hidden="true"></span>
+        <span><small>Download on the</small>App Store</span>
+      </a>
     </header>
 
     <main>
-      <section class="hero">
-        <div>
-          <p class="eyebrow">DoorCodes</p>
-          <h1>Stop digging through texts and notes at the door.</h1>
-          <p class="lede">DoorCodes keeps gate codes, garage entries, apartment buzzers, and office access details organized by place so the right code is ready when you need it most.</p>
-          <p class="release-label">Now live on the App Store · April 2026</p>
+      <section class="hero home-hero">
+        <div class="hero-content">
+          <h1>DoorCodes</h1>
+          <p class="hero-subhead">Access codes, ready on arrival.</p>
+          <p class="lede">Save gate codes, garage entries, apartment buzzers, and office access details by place, then get privacy-safe reminders when you arrive. Reveal securely with Face ID or Touch ID.</p>
           <div class="button-row">
-            <a class="button primary app-store-cta" href="https://apps.apple.com/us/app/doorcodes-vault/id6761863570">Download on the App Store</a>
-            <a class="button secondary" href="faq.html">Browse FAQ</a>
+            <a class="button primary app-store-cta" href="https://apps.apple.com/us/app/doorcodes-vault/id6761863570">
+              <span class="store-icon" aria-hidden="true"></span>
+              <span>Download on the App Store</span>
+            </a>
+            <a class="button secondary" href="faq.html">
+              <span>Browse FAQ</span>
+              <span class="arrow-icon" aria-hidden="true"></span>
+            </a>
           </div>
-          <p class="cta-note small">Available now for iPhone and iPad.</p>
+          <div class="trust-row" aria-label="DoorCodes privacy and platform highlights">
+            <span>Private by design</span>
+            <span>iPhone + iPad</span>
+          </div>
         </div>
-
-        <aside class="hero-card">
-          <h2>Built for calm, private access</h2>
-          <div class="hero-badges">
-            <span class="badge">iPhone + iPad</span>
-            <span class="badge">Privacy-safe alerts</span>
-            <span class="badge">Optional iCloud sync</span>
-          </div>
-          <p class="small">DoorCodes is designed for recurring everyday access: apartment buildings, gates, garages, offices, and shared spaces where the hard part is not remembering the code exists, but finding it in time.</p>
-          <div class="pill-row">
-            <span class="pill success">Arrival reminders without lock-screen code exposure</span>
-            <span class="pill">Secure Reveal with Face ID / Touch ID</span>
-          </div>
-          <p class="small">You can keep your data on-device or turn on private iCloud sync if you want the same places and settings on your own Apple devices.</p>
-        </aside>
       </section>
 
-      <section class="grid" aria-label="Highlights">
-        <article class="card span-4">
-          <h3>Save one place, multiple codes</h3>
-          <p>Store labels, notes, and more than one code for the same address so entry details stay grouped by where they belong.</p>
-        </article>
+      <section class="screen-wall" aria-label="DoorCodes app screens">
+        <div class="screen-wall-copy">
+          <h2>Everything you need. Right when you need it.</h2>
+          <p>Places, Nearby, Recents, and Secure Reveal work together so access details stay attached to real-world locations instead of scattered across messages and screenshots.</p>
+        </div>
+        <div class="phone-strip">
+          <figure class="phone-frame">
+            <img src="screenshots/iphone/iphone-places-dark.png" alt="DoorCodes Places list on iPhone">
+            <figcaption>Places</figcaption>
+          </figure>
+          <figure class="phone-frame">
+            <img src="screenshots/iphone/iphone-nearby-dark.png" alt="DoorCodes Nearby screen on iPhone">
+            <figcaption>Nearby</figcaption>
+          </figure>
+          <figure class="phone-frame">
+            <img src="screenshots/iphone/iphone-recents-dark.png" alt="DoorCodes Recents summary on iPhone">
+            <figcaption>Recents</figcaption>
+          </figure>
+          <figure class="phone-frame darken-ui">
+            <img src="screenshots/iphone/iphone-place-detail-quick-reveal.png" alt="DoorCodes quick reveal on iPhone">
+            <figcaption>Reveal</figcaption>
+          </figure>
+          <figure class="phone-frame darken-ui">
+            <img src="screenshots/iphone/iphone-settings-privacy.png" alt="DoorCodes privacy settings on iPhone">
+            <figcaption>Privacy</figcaption>
+          </figure>
+        </div>
+      </section>
 
-        <article class="card span-4">
-          <h3>Surface the right place faster</h3>
-          <p>Nearby and Recents help you get to the right saved place without scrolling through every gate, garage, or building you have ever stored.</p>
+      <section class="feature-rail" aria-label="DoorCodes core features">
+        <article>
+          <div class="feature-icon pin-icon" aria-hidden="true"></div>
+          <h3>Places</h3>
+          <p>Organize codes by the places you visit. Multiple codes, notes, and labels per place.</p>
         </article>
-
-        <article class="card span-4">
-          <h3>Keep sensitive details protected</h3>
-          <p>Secure Reveal and privacy-safe reminders help protect hidden access details from quick glances, lock screens, and accidental oversharing.</p>
+        <article>
+          <div class="feature-icon nearby-icon" aria-hidden="true"></div>
+          <h3>Nearby</h3>
+          <p>See what's close and get privacy-safe arrival reminders that keep details hidden.</p>
+        </article>
+        <article>
+          <div class="feature-icon recent-icon" aria-hidden="true"></div>
+          <h3>Recents</h3>
+          <p>Quick access to the places you've used recently, when every second counts.</p>
+        </article>
+        <article>
+          <div class="feature-icon lock-icon" aria-hidden="true"></div>
+          <h3>Secure Reveal</h3>
+          <p>Reveal codes only when you're ready with Face ID or Touch ID.</p>
         </article>
       </section>
 
-      <section class="section">
+      <section class="section scenario-section">
         <div class="section-header">
           <div>
-            <p class="eyebrow">In The App</p>
-            <h2>See DoorCodes on iPhone and iPad</h2>
+            <h2>Real life. Real places.</h2>
+            <p>DoorCodes is for the in-between moment: you have arrived, the keypad is right there, and the code is buried somewhere else.</p>
           </div>
-          <p>A quick look at the actual iPhone and iPad experience, using the same captures shown in the App Store listing.</p>
         </div>
 
-        <div class="screenshot-grid" aria-label="DoorCodes app screenshots">
-          <article class="screenshot-card">
-            <div class="screenshot-frame">
-              <img src="screenshots/iphone/iphone-places-list.png" alt="DoorCodes Places list on iPhone">
-            </div>
-            <div class="screenshot-meta">
-              <span class="device-chip">iPhone</span>
-              <h3>Places organized by location</h3>
-              <p>Keep saved access details grouped by the places where they matter.</p>
+        <div class="scenario-grid">
+          <article class="scenario-card apartment">
+            <div class="scenario-media" aria-hidden="true"></div>
+            <div class="scenario-copy">
+              <span class="scenario-icon building-icon" aria-hidden="true"></span>
+              <h3>Apartment Gates</h3>
+              <p>Buzz in or enter the gate code without scrambling.</p>
             </div>
           </article>
 
-          <article class="screenshot-card">
-            <div class="screenshot-frame">
-              <img src="screenshots/iphone/iphone-nearby-ready.png" alt="DoorCodes Nearby readiness screen on iPhone">
-            </div>
-            <div class="screenshot-meta">
-              <span class="device-chip">iPhone</span>
-              <h3>Nearby readiness at a glance</h3>
-              <p>See arrival status, closest places, and whether reminders are ready to help.</p>
+          <article class="scenario-card storage">
+            <div class="scenario-media" aria-hidden="true"></div>
+            <div class="scenario-copy">
+              <span class="scenario-icon lock-small-icon" aria-hidden="true"></span>
+              <h3>Storage Units</h3>
+              <p>Unit codes and gate entries, saved and ready.</p>
             </div>
           </article>
 
-          <article class="screenshot-card">
-            <div class="screenshot-frame">
-              <img src="screenshots/iphone/iphone-place-detail-quick-reveal.png" alt="DoorCodes place detail reveal screen on iPhone">
-            </div>
-            <div class="screenshot-meta">
-              <span class="device-chip">iPhone</span>
-              <h3>Fast reveal when you need it</h3>
-              <p>Jump into the place detail view and reveal a protected code only when you are ready.</p>
+          <article class="scenario-card realtor">
+            <div class="scenario-media" aria-hidden="true"></div>
+            <div class="scenario-copy">
+              <span class="scenario-icon key-icon" aria-hidden="true"></span>
+              <h3>Realtor Keyboxes</h3>
+              <p>Access showing instructions and codes in one place.</p>
             </div>
           </article>
 
-          <article class="screenshot-card">
-            <div class="screenshot-frame">
-              <img src="screenshots/iphone/iphone-settings-privacy.png" alt="DoorCodes privacy settings on iPhone">
-            </div>
-            <div class="screenshot-meta">
-              <span class="device-chip">iPhone</span>
-              <h3>Privacy-first settings</h3>
-              <p>Choose secure reveal and notification behavior without exposing too much on the lock screen.</p>
-            </div>
-          </article>
-
-          <article class="screenshot-card">
-            <div class="screenshot-frame">
-              <img src="screenshots/ipad/ipad-places-workspace.png" alt="DoorCodes Places workspace on iPad">
-            </div>
-            <div class="screenshot-meta">
-              <span class="device-chip">iPad</span>
-              <h3>Room to browse and compare</h3>
-              <p>The iPad layout gives Places and detail panes a clearer workspace for quick access.</p>
-            </div>
-          </article>
-
-          <article class="screenshot-card">
-            <div class="screenshot-frame">
-              <img src="screenshots/ipad/ipad-place-detail-quick-reveal.png" alt="DoorCodes place detail on iPad">
-            </div>
-            <div class="screenshot-meta">
-              <span class="device-chip">iPad</span>
-              <h3>Quick reveal on a larger canvas</h3>
-              <p>Open a saved place, inspect location context, and reveal the right code without crowding the view.</p>
+          <article class="scenario-card manual">
+            <div class="scenario-media" aria-hidden="true"></div>
+            <div class="scenario-copy">
+              <span class="scenario-icon keypad-icon" aria-hidden="true"></span>
+              <h3>Manual Entry</h3>
+              <p>DoorCodes doesn't open doors. You enter the code yourself.</p>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-header">
-          <div>
-            <p class="eyebrow">Why It Exists</p>
-            <h2>Less scrambling at the door</h2>
-          </div>
-          <p>DoorCodes is for real-world everyday friction: apartment complexes, office entries, side gates, garages, and shared spaces where the hard part is not remembering the code exists, but finding it at the right moment.</p>
+      <section class="support-band">
+        <div class="shield-mark" aria-hidden="true"></div>
+        <div>
+          <h2>Support when you need it. Privacy always.</h2>
+          <p>Start with the FAQ for reminders, permissions, Cloud Sync, and Secure Reveal. For help with a specific access flow, support is one email away.</p>
         </div>
-        <div class="grid">
-          <article class="card span-6">
-            <h3>Arrival-aware, not noisy</h3>
-            <p>When you choose arrival reminders, DoorCodes is built to keep those alerts useful and privacy-safe instead of turning them into lock-screen clutter.</p>
-          </article>
-          <article class="card span-6">
-            <h3>Your data, your pace</h3>
-            <p>You can keep DoorCodes fully on-device or turn on Cloud Sync if you want your private iCloud account to carry that data across your own devices.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-header">
-          <div>
-            <p class="eyebrow">Why People Use It</p>
-            <h2>Made for the awkward moments between arriving and getting inside</h2>
-          </div>
-          <p>DoorCodes is less about storing a code and more about reducing the friction that happens when you are outside, carrying something, or trying to get in quickly.</p>
-        </div>
-        <div class="grid">
-          <article class="card span-8">
-            <p class="release-label">Everyday Utility</p>
-            <h3>One calm place for recurring access details</h3>
-            <p>DoorCodes works best for the places you revisit: apartment buildings, garages, side doors, office suites, storage gates, and other routine access points where the right code should be easy to reach without exposing too much.</p>
-            <div class="button-row">
-              <a class="button primary" href="faq.html">Open FAQ</a>
-              <a class="button secondary" href="support.html">Get Support</a>
-            </div>
-          </article>
-          <article class="card span-4">
-            <h3>Best fit for</h3>
-            <ul>
-              <li>Apartment and condo entries</li>
-              <li>Gates, garages, and keypad doors</li>
-              <li>Small offices and shared workspaces</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="callout">
-        <p class="eyebrow">Support & Privacy</p>
-        <h2>Support is ready if you need it.</h2>
-        <p>Start with the <a class="inline-link" href="faq.html">DoorCodes FAQ</a> for quick answers about reminders, permissions, Cloud Sync, and Secure Reveal. If you still need help, email <a class="inline-link" href="mailto:support@doorcodesapp.com?subject=DoorCodes%20Support">support@doorcodesapp.com</a>. We aim to reply within 3 business days.</p>
-        <div class="button-row">
-          <a class="button primary" href="faq.html">Open FAQ</a>
+        <div class="button-row support-actions">
+          <a class="button primary" href="faq.html">
+            <span>Open FAQ</span>
+            <span class="arrow-icon" aria-hidden="true"></span>
+          </a>
           <a class="button secondary" href="mailto:support@doorcodesapp.com?subject=DoorCodes%20Support">Email Support</a>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-header">
-          <div>
-            <p class="eyebrow">Available Now</p>
-            <h2>Built around the core iPhone and iPad experience</h2>
-          </div>
-          <p>DoorCodes focuses on fast access, privacy, and simple organization on the Apple devices people are most likely to use at the door.</p>
-        </div>
-        <div class="grid">
-          <article class="card span-7">
-            <h3>Included today</h3>
-            <ul>
-              <li>Places, Nearby, Recents, and settings on iPhone and iPad</li>
-              <li>Privacy-safe arrival reminders</li>
-              <li>Secure Reveal for protected codes</li>
-              <li>Optional private iCloud sync</li>
-            </ul>
-          </article>
-
-          <article class="card span-5">
-            <h3>Focused launch scope</h3>
-            <ul>
-              <li>DoorCodes is currently focused on the core app experience.</li>
-              <li>Customer support, FAQ, and privacy guidance are already live.</li>
-              <li><a class="inline-link" href="https://apps.apple.com/us/app/doorcodes-vault/id6761863570">Download the current App Store release.</a></li>
-            </ul>
-          </article>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-block">
+      <div class="footer-block footer-brand">
+        <div class="brand-mark">DC</div>
         <p><strong>DoorCodes</strong><br><span class="muted">Access codes, ready on arrival.</span></p>
-        <p class="small footer-note">Organize access details by place, keep sensitive codes protected, and get to the right entry faster.</p>
       </div>
       <div class="footer-block">
-        <p class="footer-title">Contact</p>
-        <a class="footer-link" href="mailto:support@doorcodesapp.com?subject=DoorCodes%20Support">support@doorcodesapp.com</a>
-        <p class="small muted">We aim to reply within 3 business days.</p>
+        <p class="footer-title">Explore</p>
+        <a class="footer-link" href="faq.html">FAQ</a>
+        <a class="footer-link" href="whats-new.html">What's New</a>
+        <a class="footer-link" href="press.html">Press</a>
       </div>
       <div class="footer-block">
-        <p class="footer-title">Pages</p>
-        <div class="meta-row">
-          <a class="button secondary" href="faq.html">FAQ</a>
-          <a class="button secondary" href="whats-new.html">What's New</a>
-          <a class="button secondary" href="press.html">Press</a>
-          <a class="button secondary" href="media-kit/doorcodes-media-kit.zip">Media</a>
-          <a class="button secondary" href="support.html">Support</a>
-          <a class="button secondary" href="privacy.html">Privacy</a>
-        </div>
+        <p class="footer-title">Support</p>
+        <a class="footer-link" href="support.html">Support</a>
+        <a class="footer-link" href="privacy.html">Privacy</a>
+        <a class="footer-link" href="mailto:support@doorcodesapp.com?subject=DoorCodes%20Support">Email</a>
+      </div>
+      <div class="footer-block">
+        <p class="footer-title">More</p>
+        <a class="footer-link" href="support.html">Status</a>
+        <a class="footer-link" href="index.html">Sitemap</a>
+      </div>
+      <div class="footer-block footer-store">
+        <a class="button secondary app-store-cta" href="https://apps.apple.com/us/app/doorcodes-vault/id6761863570">
+          <span class="store-icon" aria-hidden="true"></span>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <p class="small muted">2026 DoorCodes. All rights reserved.</p>
       </div>
     </footer>
   </div>
