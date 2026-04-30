@@ -15,6 +15,8 @@ Use this template in a separate public GitHub repository so the DoorCodes app co
 - Marketing URL: `https://doorcodesapp.com/`
 - Support URL: `https://doorcodesapp.com/support.html`
 - Privacy Policy URL: `https://doorcodesapp.com/privacy.html`
+- Press URL: `https://doorcodesapp.com/press.html`
+- Media kit ZIP: `https://doorcodesapp.com/media-kit/doorcodes-media-kit.zip`
 
 ## Contact Emails
 
@@ -29,6 +31,7 @@ Use this template in a separate public GitHub repository so the DoorCodes app co
 - `index.html`
 - `faq.html`
 - `whats-new.html`
+- `press.html`
 - `support.html`
 - `privacy.html`
 - `clip/demo/index.html`
@@ -37,6 +40,7 @@ Use this template in a separate public GitHub repository so the DoorCodes app co
 - `robots.txt`
 - `sitemap.xml`
 - `screenshots/`
+- `media-kit/`
 - `.nojekyll`
 - `.github/workflows/publish-pages.yml`
 
