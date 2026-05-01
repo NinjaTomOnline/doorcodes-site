@@ -1,0 +1,16 @@
+{
+  "name": "DoorCodes",
+  "tagline": "Access codes, ready on arrival with privacy-safe reminders and Secure Reveal.",
+  "category": "iOS App",
+  "status": "Live",
+  "website": "https://doorcodesapp.com/",
+  "supportUrl": "https://doorcodesapp.com/support.html",
+  "privacyUrl": "https://doorcodesapp.com/privacy.html",
+  "appStoreUrl": "https://apps.apple.com/us/app/doorcodes-vault/id6761863570",
+  "icon": "https://doorcodesapp.com/assets/doorcodes-favicon-512.png",
+  "previewImage": "https://doorcodesapp.com/assets/doorcodes-social-preview.png",
+  "previewImageAlt": "DoorCodes website preview for the upgraded access-code app site.",
+  "accent": "#38BDF8",
+  "featured": true,
+  "sortOrder": 10
+}

@@ -35,6 +35,7 @@ Use this template in a separate public GitHub repository so the DoorCodes app co
 - `support.html`
 - `privacy.html`
 - `clip/demo/index.html`
+- `site-manifest.json`
 - `site.css`
 - `assets/`
 - `robots.txt`
