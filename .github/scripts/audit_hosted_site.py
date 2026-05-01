@@ -181,6 +181,18 @@ def check_zip(root: Path, checks: list[Check]) -> None:
         add(checks, "media kit ZIP is readable", False, str(error))
 
 
+def live_check_name(url: str) -> str:
+    if url == APP_STORE_URL:
+        return f"live URL responds or Apple rate-limits: {url}"
+    return f"live URL responds: {url}"
+
+
+def live_status_ok(url: str, status: int) -> bool:
+    # Apple can return 429 to GitHub-hosted runners even when the public App Store
+    # link is valid, so keep the audit focused on issues we control.
+    return 200 <= status < 400 or (url == APP_STORE_URL and status == 429)
+
+
 def check_live(checks: list[Check]) -> None:
     urls = [
         *CORE_PAGES.values(),
@@ -189,14 +201,15 @@ def check_live(checks: list[Check]) -> None:
         f"{BASE_URL}/assets/download-on-app-store.svg",
     ]
     for url in urls:
+        check_name = live_check_name(url)
         try:
             req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "DoorCodesPagesAudit/1.0"})
             with urllib.request.urlopen(req, timeout=20) as response:
-                add(checks, f"live URL responds: {url}", 200 <= response.status < 400, f"HTTP {response.status}")
+                add(checks, check_name, live_status_ok(url, response.status), f"HTTP {response.status}")
         except urllib.error.HTTPError as error:
-            add(checks, f"live URL responds: {url}", False, f"HTTP {error.code}")
+            add(checks, check_name, live_status_ok(url, error.code), f"HTTP {error.code}")
         except Exception as error:  # noqa: BLE001
-            add(checks, f"live URL responds: {url}", False, str(error))
+            add(checks, check_name, False, str(error))
 
 
 def run(root: Path, live: bool) -> list[Check]:
