@@ -133,6 +133,10 @@ img {
   gap: clamp(14px, 2.7vw, 34px);
 }
 
+.mobile-menu {
+  display: none;
+}
+
 .nav a {
   padding: 22px 0 19px;
   border-bottom: 2px solid transparent;
@@ -1294,7 +1298,7 @@ code {
   }
 
   .home-hero {
-    min-height: 640px;
+    min-height: 560px;
   }
 
   .home-hero::before {
@@ -1309,7 +1313,7 @@ code {
 
   .hero-content {
     align-self: end;
-    padding-top: 260px;
+    padding-top: 170px;
     padding-bottom: 40px;
   }
 
@@ -1335,7 +1339,7 @@ code {
     width: 100%;
     max-width: 100%;
     padding: 0 0 56px;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .topbar,
@@ -1367,10 +1371,14 @@ code {
   }
 
   .topbar {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: start;
-    gap: 10px;
+    position: sticky;
+    top: max(8px, env(safe-area-inset-top));
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    overflow: visible;
     padding: 10px 12px 12px;
     border: 1px solid rgba(255, 255, 255, 0.11);
     border-radius: 14px;
@@ -1379,7 +1387,7 @@ code {
   }
 
   .brand {
-    width: 100%;
+    width: auto;
     gap: 10px;
   }
 
@@ -1394,38 +1402,87 @@ code {
   }
 
   .nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 8px;
-    width: 100%;
-    overflow-x: auto;
-    padding: 0 0 2px;
-    scrollbar-width: none;
-  }
-
-  .nav::-webkit-scrollbar {
     display: none;
   }
 
-  .nav a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .mobile-menu {
+    position: relative;
+    z-index: 10;
+    display: block;
     flex: 0 0 auto;
-    min-width: 0;
-    min-height: 34px;
-    padding: 7px 12px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.11);
+    margin-left: auto;
+  }
+
+  .mobile-menu summary {
+    align-items: center;
+    appearance: none;
+    border: 1px solid rgba(20, 120, 255, 0.62);
     border-radius: 999px;
-    font-size: 0.78rem;
+    background: rgba(20, 120, 255, 0.14);
+    color: var(--text);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.82rem;
+    font-weight: 800;
+    gap: 8px;
+    justify-content: center;
     line-height: 1;
+    min-height: 38px;
+    padding: 10px 13px;
+    text-align: center;
+    user-select: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu summary::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.18s ease;
+  }
+
+  .mobile-menu[open] summary::after {
+    transform: translateY(2px) rotate(225deg);
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: min(320px, calc(100vw - 32px));
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    background: #020408;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(24px);
+  }
+
+  .mobile-nav a {
+    min-height: 44px;
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #d9dfdc;
+    font-size: 0.9rem;
+    font-weight: 800;
     text-align: center;
   }
 
-  .nav a.active,
-  .nav a:hover {
-    border-color: rgba(20, 120, 255, 0.78);
-    background: rgba(20, 120, 255, 0.18);
+  .mobile-nav a.active,
+  .mobile-nav a:hover {
+    border-color: rgba(20, 120, 255, 0.86);
+    background: rgba(20, 120, 255, 0.22);
+    color: var(--text);
   }
 
   .nav-cta {
@@ -1433,18 +1490,19 @@ code {
   }
 
   .home-hero {
-    min-height: 590px;
-    margin-top: 10px;
+    align-items: stretch;
+    min-height: auto;
+    margin-top: 8px;
   }
 
   .home-hero::before {
-    background-position: 68% top;
+    background-position: 70% center;
   }
 
   .hero-content {
     width: 100%;
-    max-width: min(100%, 330px);
-    padding: 250px 0 30px;
+    max-width: min(100%, 340px);
+    padding: 82px 0 28px;
   }
 
   .lede {
