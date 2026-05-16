@@ -24,10 +24,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Pre-publish Audit
-        run: python3 .github/scripts/audit_hosted_site.py --hosted-root .
+        uses: actions/checkout@v4
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
@@ -35,13 +32,10 @@ jobs:
           enablement: true
 
       - name: Upload Site Artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
-
-      - name: Live Production Audit
-        run: python3 .github/scripts/audit_hosted_site.py --hosted-root . --live
+        uses: actions/deploy-pages@v4

@@ -10,38 +10,19 @@ Use this template in a separate public GitHub repository so the DoorCodes app co
   - `https://ninjatomonline.github.io/doorcodes-site/support.html`
   - `https://ninjatomonline.github.io/doorcodes-site/privacy.html`
 
-## Public URLs
-
-- Marketing URL: `https://doorcodesapp.com/`
-- Support URL: `https://doorcodesapp.com/support.html`
-- Privacy Policy URL: `https://doorcodesapp.com/privacy.html`
-- Press URL: `https://doorcodesapp.com/press.html`
-- Media kit ZIP: `https://doorcodesapp.com/media-kit/doorcodes-media-kit.zip`
-
-## Contact Emails
-
-- Support: `support@doorcodesapp.com`
-- Privacy: `privacy@doorcodesapp.com`
-- Press: `press@doorcodesapp.com`
-- App Store/review: `appstore@doorcodesapp.com`
-- General: `hello@doorcodesapp.com`
-
 ## Contents this repo should contain
 
 - `index.html`
 - `faq.html`
 - `whats-new.html`
-- `press.html`
 - `support.html`
 - `privacy.html`
 - `clip/demo/index.html`
-- `site-manifest.json`
 - `site.css`
 - `assets/`
 - `robots.txt`
 - `sitemap.xml`
 - `screenshots/`
-- `media-kit/`
 - `.nojekyll`
 - `.github/workflows/publish-pages.yml`
 
